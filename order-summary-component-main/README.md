@@ -29,7 +29,7 @@ Users should be able to:
 
 ![](./screenshot.jpg)![1671844050872](screenshot/desktop-1234x592.png)
 
-![1671845163687](image/README-template/1671845163687.png)
+![1671845163687](screenshot/mobile-375x709.jpeg)
 
 ### Links
 
@@ -43,7 +43,6 @@ Users should be able to:
 - Flexbox
 - SCSS
 - Some logical properties like "inline-size", "margin-block-end".
-
 
 ### Continued development
 
@@ -69,3 +68,5 @@ And the folder structure.
 Thanks to everyone who encouraged me to try to improve.
 
 And the authors of the above resources.
+
+And the Google Translate :-)
