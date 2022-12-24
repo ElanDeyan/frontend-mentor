@@ -1,0 +1,152 @@
+@use 'variables'as var;
+
+body {
+    background-color: var(--clr-primary-pale-blue);
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+
+    @media #{var.$mobile-screen} {
+        background-image: url('../images/pattern-background-mobile.svg');
+    }
+}
+
+body,
+.order-summary-card {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    grid-template-rows: auto min-content;
+}
+
+.card {
+    overflow: hidden;
+    inline-size: 350px;
+    border-radius: 1rem;
+    background-color: var(--clr-neutral-white);
+    box-shadow: 0 25px 35px var(--clr-alpha-desnaturated-blue);
+
+    @media #{var.$mobile-screen} {
+        inline-size: 90%;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5em 2em;
+        text-align: center;
+
+        @media #{var.$mobile-screen} {
+            padding: 1.5em;
+        }
+
+        .top {
+            .card-title {
+                font-size: 1.375rem;
+                font-weight: map-get($map: var.$font-weights, $key: "black");
+                color: var(--clr-neutral-dark-blue);
+                margin-block-end: .75rem;
+            }
+            .description {
+                color: var(--clr-neutral-desnaturated-blue);
+                line-height: 1.5rem;
+            }
+        }
+
+        .middle {
+            .order {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .5em 1em;
+
+                background-color: var(--clr-neutral-very-pale-blue);
+
+                border-radius: .5rem;
+
+                .order-details {
+                    text-align: start;
+                    margin-inline-end: 1.5rem;
+
+                    .title {
+                        font-weight: map-get($map: var.$font-weights, $key: "bold");
+                        color: var(--clr-neutral-dark-blue);
+                    }
+
+                    .price {
+                        font-size: .875rem;
+                        color: var(--clr-neutral-desnaturated-blue);
+                    }
+
+                }
+
+                .change {
+                    font-size: .875rem;
+                    font-weight: map-get($map: var.$font-weights, $key: "black");
+                    color: var(--clr-primary-bright-blue);
+                    transition: 
+                        color 350ms ease-in-out,
+                        text-decoration 350ms ease-in-out,
+                        scale 350ms ease-in-out
+                        ;
+
+                    &:hover,
+                    &:focus {
+                        color: var(--clr-primary-light-bright-blue);
+                        text-decoration: none;
+                    }
+
+                    &:active {
+                        scale: 0.8;
+                    }
+                }
+            }
+        }
+        .bottom {
+            .actions {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .button {
+                    padding: .75em 1em;
+                    font-weight: map-get($map: var.$font-weights, $key: "bold");
+                    text-decoration: none;
+
+                    &:active {
+                        scale: 0.8;
+                    }
+
+                    &[data-type="primary"] {
+                        background-color: var(--clr-primary-bright-blue);
+                        color: var(--clr-neutral-white);
+                        border-radius: .5rem;
+                        box-shadow: 0 25px 35px var(--clr-alpha-desnaturated-blue);
+                        transition: 
+                            background-color 350ms ease-in-out,
+                            scale 350ms ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            background-color: var(--clr-primary-light-bright-blue);
+                        }
+                    }
+
+                    &[data-type="secondary"] {
+                        color: var(--clr-neutral-desnaturated-blue);
+                        transition: 
+                            color 350ms ease-in-out,
+                            scale 350ms ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            color: var(--clr-neutral-dark-blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

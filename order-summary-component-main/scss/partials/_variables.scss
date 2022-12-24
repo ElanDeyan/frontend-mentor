@@ -1,0 +1,22 @@
+// CSS custom properties
+
+:root {
+    --clr-primary-pale-blue: hsl(225 100% 94%);
+    --clr-primary-bright-blue: hsl(245 75% 52%);
+    --clr-primary-light-bright-blue: hsl(245 75% 75%);
+    
+    --clr-neutral-white: hsl(0 50% 100%);
+    --clr-neutral-very-pale-blue: hsl(225 100% 98%);
+    --clr-neutral-desnaturated-blue: hsl(224 23% 55%);
+    --clr-alpha-desnaturated-blue: hsla(224 23% 55% / 25%);
+    --clr-neutral-dark-blue: hsl(223 47% 23%);
+}
+
+// SCSS variables
+
+$mobile-screen: 'only screen and (max-width: 375px)';
+$desktop-screen: 'only screen and (max-width: 1440px)';
+
+// SCSS map for weights
+
+$font-weights: ("regular": 500, "bold": 700, "black": 900);
