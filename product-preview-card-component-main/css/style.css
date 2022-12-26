@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+:root {
+  --h: 0;
+  --s: 0;
+  --l: 0;
+  --alpha: 0;
+  --clr-primary-dark-cyan: - hsl(158, 36%, 37%);
+  --clr-primary-cream: hsl(30, 38%, 92%);
+  --clr-neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  grid-auto-rows: auto min-content;
+  min-block-size: 100vh;
+  overflow: hidden scroll;
+}
+
+li {
+  list-style: none;
+}
+
+::marker {
+  content: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+figure,
+picture,
+source,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

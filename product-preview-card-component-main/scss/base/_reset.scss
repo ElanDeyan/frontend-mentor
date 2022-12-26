@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    grid-auto-rows: auto min-content;
+
+    min-block-size: 100vh;
+    overflow: hidden scroll;
+}
+
+li {
+    list-style: none;
+}
+
+::marker {
+    content: none;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+figure,
+picture,
+source,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
