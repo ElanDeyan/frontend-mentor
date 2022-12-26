@@ -4,7 +4,7 @@
     --l: 0;
     --alpha: 0;
 
-    --clr-primary-dark-cyan: - hsl(158, 36%, 37%);
+    --clr-primary-dark-cyan: hsl(158, 36%, 37%);
     --clr-primary-cream: hsl(30, 38%, 92%);
 
     --clr-neutral-very-dark-blue: hsl(212, 21%, 14%);
@@ -15,4 +15,10 @@
 $font-weights: (
     "regular": 500,
     "bold": 700
+);
+
+$media-queries: (
+    "mobile": "only screen and (max-width: 375px)",
+    "tablet": "only screen and (min-width: 376px)",
+    "desktop": "only screen and (min-width: 768px)"
 );

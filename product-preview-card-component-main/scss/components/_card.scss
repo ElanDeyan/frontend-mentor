@@ -1,0 +1,157 @@
+@use '../sass-utils/variables'as var;
+
+body {
+    background-color: var(--clr-primary-cream);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    max-inline-size: 90vw;
+    margin: 0 auto;
+    border-radius: .5rem;
+
+    overflow: hidden;
+
+    background-color: var(--clr-neutral-white);
+
+    @media #{map-get(var.$media-queries, "tablet")} {
+        max-inline-size: 500px;
+        flex-direction: row;
+        margin: 2rem;
+    }
+
+    .product-image {
+        order: -1;
+
+        @media #{map-get(var.$media-queries, "tablet")} {
+            flex-basis: 45%;
+        }
+    }
+
+    .card-content {
+        padding: 1.5em;
+
+        @media #{map-get(var.$media-queries, "tablet")} {
+            padding: 1.5em 2em;
+            flex-basis: 55%;
+        }
+    }
+
+    .header {
+        .top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .product-class {
+                order: -1;
+                font-size: .875rem;
+                font-weight: map-get($map: var.$font-weights, $key: "regular");
+                color: var(--clr-neutral-dark-grayish-blue);
+                text-transform: uppercase;
+                letter-spacing: .25rem;
+                margin-block-end: .625rem;
+
+                @media #{map-get(var.$media-queries, "tablet")} {
+                    font-size: .625rem;
+                }
+                
+                @media #{map-get(var.$media-queries, "desktop")} {
+                    font-size: .75rem;
+                    margin-block-end: 1rem;
+                }
+            }
+
+            .product-name {
+                font-family: 'Fraunces', serif;
+                font-weight: map-get($map: var.$font-weights, $key: "bold");
+                font-size: 2.125rem;
+                color: var(--clr-neutral-very-dark-blue);
+                margin-block-end: .875rem;
+                line-height: 1;
+
+                @media #{map-get(var.$media-queries, "tablet")} {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .description {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--clr-neutral-dark-grayish-blue);
+        margin-block-end: 1.5rem;
+
+        @media #{map-get(var.$media-queries, "tablet")} {
+            font-size: .75rem;
+            line-height: 1.5;
+        }
+        
+        @media #{map-get(var.$media-queries, "desktop")} {
+            font-size: .875rem;
+        }
+    }
+
+    .pricing {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+        max-inline-size: 50%;
+        margin-block-end: .875rem;
+
+        @media #{map-get(var.$media-queries, "tablet")} {
+            gap: 1rem;
+            max-inline-size: none;
+        }
+
+        .new {
+            text-decoration: none;
+            font-family: 'Fraunces', serif;
+            font-size: 2.125rem;
+            color: var(--clr-primary-dark-cyan);
+            font-weight: map-get($map: var.$font-weights, $key: "bold");
+
+            @media #{map-get(var.$media-queries, "tablet")} {
+                font-size: 1.625rem;
+            }
+
+            @media #{map-get(var.$media-queries, "desktop")} {
+                font-size: 1.875rem;
+            }
+        }
+
+        .old {
+            color: var(--clr-neutral-dark-grayish-blue);
+            font-size: .875rem;
+
+            @media #{map-get(var.$media-queries, "desktop")} {
+                font-size: .75rem;
+            }
+        }
+    }
+        
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            border-radius: .5rem;
+            padding: 1em;
+
+            &[data-type="primary"] {
+                background-color: var(--clr-primary-dark-cyan);
+                color: var(--clr-neutral-white);
+                text-decoration: none;
+            }
+            span {
+                font-weight: map-get($map: var.$font-weights, $key: "regular");
+
+                @media #{map-get(var.$media-queries, "tablet")} {
+                    font-size: .875rem;
+                }
+            }
+        }
+}
