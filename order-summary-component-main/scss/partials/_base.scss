@@ -19,3 +19,12 @@ body {
     min-block-size: 100vh;
     overflow: hidden scroll;
 }
+
+img,
+figure,
+picture,
+source,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
