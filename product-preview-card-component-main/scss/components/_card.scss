@@ -19,7 +19,7 @@ body {
     background-color: var(--clr-neutral-white);
 
     @media #{map-get(var.$media-queries, "tablet")} {
-        max-inline-size: 500px;
+        max-inline-size: 525px;
         flex-direction: row;
         margin: 2rem;
     }
@@ -36,7 +36,7 @@ body {
         padding: 1.5em;
 
         @media #{map-get(var.$media-queries, "tablet")} {
-            padding: 1.5em 2em;
+            padding: 1.5em 2.75em;
             flex-basis: 55%;
         }
     }
@@ -145,6 +145,16 @@ body {
                 background-color: var(--clr-primary-dark-cyan);
                 color: var(--clr-neutral-white);
                 text-decoration: none;
+                transition: background-color 350ms ease-in-out;
+
+                &:hover,
+                &:focus {
+                    /*158, 36%, 37%*/
+                    --h: 158;
+                    --s: 36%;
+                    --l: 22.5%;
+                    background-color: hsl(var(--h), var(--s), var(--l));
+                }
             }
             span {
                 font-weight: map-get($map: var.$font-weights, $key: "regular");

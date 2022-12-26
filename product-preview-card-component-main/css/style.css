@@ -76,7 +76,7 @@ body {
 }
 @media only screen and (min-width: 376px) {
   .card {
-    max-inline-size: 500px;
+    max-inline-size: 525px;
     flex-direction: row;
     margin: 2rem;
   }
@@ -94,7 +94,7 @@ body {
 }
 @media only screen and (min-width: 376px) {
   .card .card-content {
-    padding: 1.5em 2em;
+    padding: 1.5em 2.75em;
     flex-basis: 55%;
   }
 }
@@ -202,6 +202,14 @@ body {
   background-color: var(--clr-primary-dark-cyan);
   color: var(--clr-neutral-white);
   text-decoration: none;
+  transition: background-color 350ms ease-in-out;
+}
+.card .button[data-type=primary]:hover, .card .button[data-type=primary]:focus {
+  /*158, 36%, 37%*/
+  --h: 158;
+  --s: 36%;
+  --l: 22.5%;
+  background-color: hsl(var(--h), var(--s), var(--l));
 }
 .card .button span {
   font-weight: 500;
