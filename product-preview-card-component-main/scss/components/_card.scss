@@ -18,7 +18,7 @@ body {
 
     background-color: var(--clr-neutral-white);
 
-    @media #{map-get(var.$media-queries, "tablet")} {
+    @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
         max-inline-size: 525px;
         flex-direction: row;
         margin: 2rem;
@@ -27,7 +27,7 @@ body {
     .product-image {
         order: -1;
 
-        @media #{map-get(var.$media-queries, "tablet")} {
+        @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
             flex-basis: 45%;
         }
     }
@@ -35,8 +35,8 @@ body {
     .card-content {
         padding: 1.5em;
 
-        @media #{map-get(var.$media-queries, "tablet")} {
-            padding: 1.5em 2.75em;
+        @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
+            padding: 1.5em 2.125em;
             flex-basis: 55%;
         }
     }
@@ -75,7 +75,7 @@ body {
                 line-height: 1;
 
                 @media #{map-get(var.$media-queries, "tablet")} {
-                    font-size: 2rem;
+                    font-size: 2.25rem;
                 }
             }
         }
@@ -92,7 +92,7 @@ body {
         }
         
         @media #{map-get(var.$media-queries, "desktop")} {
-            font-size: .875rem;
+            font-size: .975rem;
         }
     }
 
@@ -120,7 +120,7 @@ body {
             }
 
             @media #{map-get(var.$media-queries, "desktop")} {
-                font-size: 1.875rem;
+                font-size: 2.125rem;
             }
         }
 
@@ -129,7 +129,7 @@ body {
             font-size: .875rem;
 
             @media #{map-get(var.$media-queries, "desktop")} {
-                font-size: .75rem;
+                font-size: .875rem;
             }
         }
     }
@@ -160,7 +160,7 @@ body {
                 font-weight: map-get($map: var.$font-weights, $key: "regular");
 
                 @media #{map-get(var.$media-queries, "tablet")} {
-                    font-size: .875rem;
+                    font-size: .975rem;
                 }
             }
         }

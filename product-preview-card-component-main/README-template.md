@@ -95,6 +95,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Sass Architecture Structure (github.com)](https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0)
 - [Sass: Maps (sass-lang.com)](https://sass-lang.com/documentation/values/maps)
+- [Fluid Responsive Typography With CSS Poly Fluid Sizing — Smashing Magazine](https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/)
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

@@ -74,7 +74,7 @@ body {
   overflow: hidden;
   background-color: var(--clr-neutral-white);
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 376px) and (min-aspect-ratio: 1/2) {
   .card {
     max-inline-size: 525px;
     flex-direction: row;
@@ -84,7 +84,7 @@ body {
 .card .product-image {
   order: -1;
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 376px) and (min-aspect-ratio: 1/2) {
   .card .product-image {
     flex-basis: 45%;
   }
@@ -92,9 +92,9 @@ body {
 .card .card-content {
   padding: 1.5em;
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 376px) and (min-aspect-ratio: 1/2) {
   .card .card-content {
-    padding: 1.5em 2.75em;
+    padding: 1.5em 2.125em;
     flex-basis: 55%;
   }
 }
@@ -133,7 +133,7 @@ body {
 }
 @media only screen and (min-width: 376px) {
   .card .header .top .product-name {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 .card .description {
@@ -149,7 +149,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .card .description {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
   }
 }
 .card .pricing {
@@ -179,7 +179,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .card .pricing .new {
-    font-size: 1.875rem;
+    font-size: 2.125rem;
   }
 }
 .card .pricing .old {
@@ -188,7 +188,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .card .pricing .old {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 .card .button {
@@ -216,7 +216,7 @@ body {
 }
 @media only screen and (min-width: 376px) {
   .card .button span {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
   }
 }
 
