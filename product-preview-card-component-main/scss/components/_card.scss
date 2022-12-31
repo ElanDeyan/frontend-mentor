@@ -11,14 +11,14 @@ body {
 
     max-inline-size: 375px;
     margin: 0 25px;
-    border-radius: .5rem;
+    border-radius: .875rem;
 
     overflow: hidden;
 
     background-color: var(--clr-neutral-white);
 
     @media #{map-get(var.$media-queries, "tablet")} {
-        max-inline-size: 525px;
+        max-inline-size: 430px;
         flex-direction: row;
         margin: 2rem;
     }
@@ -41,6 +41,8 @@ body {
     }
 
     .header {
+        margin-block-end: 1.125rem;
+
         @media #{map-get(var.$media-queries, "tablet")} {
             margin-block-end: 1rem;
         }
@@ -52,12 +54,12 @@ body {
 
             .product-class {
                 order: -1;
-                font-size: .875rem;
+                font-size: .75rem;
                 font-weight: map-get($map: var.$font-weights, $key: "regular");
                 color: var(--clr-neutral-dark-grayish-blue);
                 text-transform: uppercase;
                 letter-spacing: .25rem;
-                margin-block-end: .625rem;
+                margin-block-end: .875rem;
 
                 @media #{map-get(var.$media-queries, "tablet")} {
                     font-size: .5rem;
@@ -73,7 +75,7 @@ body {
             .product-name {
                 font-family: 'Fraunces', serif;
                 font-weight: map-get($map: var.$font-weights, $key: "bold");
-                font-size: 2.125rem;
+                font-size: 2.0125rem;
                 color: var(--clr-neutral-very-dark-blue);
                 line-height: 1;
 
@@ -90,9 +92,12 @@ body {
     }
 
     .description {
+        max-inline-size: 32ch;
         font-family: 'Montserrat', sans-serif;
         color: var(--clr-neutral-dark-grayish-blue);
-        margin-block-end: 1.5rem;
+        margin-block-end: 1.325rem;
+        line-height: 1.5;
+        font-size: .925rem;
 
         @media #{map-get(var.$media-queries, "tablet")} {
             font-size: .625rem;
@@ -137,7 +142,7 @@ body {
 
         .old {
             color: var(--clr-neutral-dark-grayish-blue);
-            font-size: .875rem;
+            font-size: .925rem;
 
             @media #{map-get(var.$media-queries, "tablet")} {
                 font-size: .625rem;
@@ -153,7 +158,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: .5rem;
+            gap: .75rem;
             border-radius: .5rem;
             padding: 1em;
             
