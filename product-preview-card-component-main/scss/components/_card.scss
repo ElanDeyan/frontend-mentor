@@ -8,17 +8,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    max-inline-size: 90vw;
-    margin: 0 auto;
+    max-inline-size: 375px;
+    margin: 0 25px;
     border-radius: .5rem;
 
     overflow: hidden;
 
     background-color: var(--clr-neutral-white);
 
-    @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
+    @media #{map-get(var.$media-queries, "tablet")} {
         max-inline-size: 525px;
         flex-direction: row;
         margin: 2rem;
@@ -27,25 +26,29 @@ body {
     .product-image {
         order: -1;
 
-        @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
-            flex-basis: 45%;
+        @media #{map-get(var.$media-queries, "tablet")} {
+            flex-basis: 50%;
         }
     }
 
     .card-content {
         padding: 1.5em;
 
-        @media #{map-get(var.$media-queries, "tablet")} and (min-aspect-ratio: 1 / 2) {
-            padding: 1.5em 2.125em;
-            flex-basis: 55%;
+        @media #{map-get(var.$media-queries, "tablet")} {
+            padding: 1.375em;
+            flex-basis: 50%;
         }
     }
 
     .header {
+        @media #{map-get(var.$media-queries, "tablet")} {
+            margin-block-end: 1rem;
+        }
         .top {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            
 
             .product-class {
                 order: -1;
@@ -57,12 +60,13 @@ body {
                 margin-block-end: .625rem;
 
                 @media #{map-get(var.$media-queries, "tablet")} {
-                    font-size: .625rem;
+                    font-size: .5rem;
+                    margin-block-end: .75rem;
                 }
                 
                 @media #{map-get(var.$media-queries, "desktop")} {
                     font-size: .75rem;
-                    margin-block-end: 1rem;
+                    margin-block-end: .75rem;
                 }
             }
 
@@ -71,11 +75,15 @@ body {
                 font-weight: map-get($map: var.$font-weights, $key: "bold");
                 font-size: 2.125rem;
                 color: var(--clr-neutral-very-dark-blue);
-                margin-block-end: .875rem;
                 line-height: 1;
 
                 @media #{map-get(var.$media-queries, "tablet")} {
-                    font-size: 2.25rem;
+                    font-size: 1.375rem;
+                    padding-inline-end: 2rem;
+                }
+                
+                @media #{map-get(var.$media-queries, "desktop")} {
+                    font-size: 1.75rem;
                 }
             }
         }
@@ -87,12 +95,15 @@ body {
         margin-block-end: 1.5rem;
 
         @media #{map-get(var.$media-queries, "tablet")} {
-            font-size: .75rem;
-            line-height: 1.5;
+            font-size: .625rem;
+            line-height: 1.625;
+            margin-block-end: 1rem;
         }
         
         @media #{map-get(var.$media-queries, "desktop")} {
-            font-size: .975rem;
+            font-size: .75rem;
+            line-height: 1.5;
+            margin-block-end: 1.125rem;
         }
     }
 
@@ -101,7 +112,7 @@ body {
         gap: 1.25rem;
         align-items: center;
         max-inline-size: 50%;
-        margin-block-end: .875rem;
+        margin-block-end: 1rem;
 
         @media #{map-get(var.$media-queries, "tablet")} {
             gap: 1rem;
@@ -116,17 +127,21 @@ body {
             font-weight: map-get($map: var.$font-weights, $key: "bold");
 
             @media #{map-get(var.$media-queries, "tablet")} {
-                font-size: 1.625rem;
+                font-size: 1.375rem;
             }
 
             @media #{map-get(var.$media-queries, "desktop")} {
-                font-size: 2.125rem;
+                font-size: 2rem;
             }
         }
 
         .old {
             color: var(--clr-neutral-dark-grayish-blue);
             font-size: .875rem;
+
+            @media #{map-get(var.$media-queries, "tablet")} {
+                font-size: .625rem;
+            }
 
             @media #{map-get(var.$media-queries, "desktop")} {
                 font-size: .875rem;
@@ -137,9 +152,20 @@ body {
         .button {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: .5rem;
             border-radius: .5rem;
             padding: 1em;
+            
+            @media #{map-get(var.$media-queries, "tablet")} {
+                font-size: .625rem;
+                border-radius: .3rem;
+            }
+            
+            @media #{map-get(var.$media-queries, "desktop")} {
+                padding: 1em;
+                font-size: .75rem;
+            }
 
             &[data-type="primary"] {
                 background-color: var(--clr-primary-dark-cyan);
@@ -156,12 +182,14 @@ body {
                     background-color: hsl(var(--h), var(--s), var(--l));
                 }
             }
+
+            .icon {
+                aspect-ratio: 1;
+                inline-size: 1.125em;
+            }
+
             span {
                 font-weight: map-get($map: var.$font-weights, $key: "regular");
-
-                @media #{map-get(var.$media-queries, "tablet")} {
-                    font-size: .975rem;
-                }
             }
         }
 }
