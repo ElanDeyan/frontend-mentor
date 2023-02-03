@@ -1,0 +1,11 @@
+.expenses-component {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-inline-size: 90vw;
+  @supports (max-inline-size: 90dvi) {
+    max-inline-size: 90dvi;
+  }
+  margin-inline: auto;
+  margin-block: auto;
+}

@@ -1,0 +1,9 @@
+body {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr max-content;
+  background-color: var(--clr-neutral-cream);
+
+  font-size: 1.125rem;
+  font-family: 'DM Sans', sans-serif;
+}

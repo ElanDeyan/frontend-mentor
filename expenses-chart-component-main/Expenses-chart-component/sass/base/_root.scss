@@ -1,0 +1,10 @@
+@use '../sass-utils/variables' as var;
+
+:root {
+  --clr-primary-soft-red: #{var.$clr-primary-soft-red};
+  --clr-primary-cyan: #{var.$clr-primary-cyan};
+  --clr-neutral-dark-brown: #{var.$clr-neutral-dark-brown};
+  --clr-neutral-medium-brown: #{var.$clr-neutral-medium-brown};
+  --clr-neutral-cream: #{var.$clr-neutral-cream};
+  --clr-neutral-very-pale-orange: #{var.$clr-neutral-very-pale-orange};
+}

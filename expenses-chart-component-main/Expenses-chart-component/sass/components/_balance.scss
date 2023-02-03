@@ -1,0 +1,19 @@
+.my-balance {
+  display: grid;
+  grid-template-areas: 
+  "title logo"
+  "balance logo"
+  ;
+
+  .title {
+    grid-area: title;
+  }
+
+  .balance {
+    grid-area: balance;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+}
